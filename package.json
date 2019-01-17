@@ -2,6 +2,7 @@
   "name": "graphql-antd",
   "version": "0.1.0",
   "main": "public/electron.js",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@types/graphql": "^14.0.4",
