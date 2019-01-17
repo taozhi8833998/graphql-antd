@@ -1,5 +1,34 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Start
+
+#### web
+To build for the Web and automatically launch a browser window for development...
+
+```
+yarn start:web
+```
+
+#### electron
+To build for the electron, launch an electron window and reload electron automatically while developing...
+```
+yarn watch:electron
+```
+and in another console tab...
+```
+yarn start:electron-dev
+```
+
+
+#### electron-builder
+To build a native application (i.e. for MacOS)...
+```
+yarn build:electron
+yarn dist
+```
+
+Then launch the dmg found in the `dist` folder or open the app in `dist/mac`
+
 ## Available Scripts
 
 In the project directory, you can run:
