@@ -2,19 +2,17 @@ import * as React from 'react'
 import { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import { Form, Icon, Input, Button, message } from 'antd'
+import { FormComponentProps } from 'antd/lib/form/Form'
 import './index.css'
 import { Store, StoreConsumer, ContextStore } from '../../store'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 import { LOGIN } from '../../queries'
 
 const FormItem = Form.Item
-
-interface Props extends RouteComponentProps<any>{
-  form?: any
-}
+interface Props extends RouteComponentProps<any>{}
 
 @(withRouter as any)
-class Login extends Component<Props, {}> {
+class Login extends Component<Props & FormComponentProps, {}> {
 
   hasErrors = (fieldsError: any) => {
     return Object.keys(fieldsError).some(field => fieldsError[field])
@@ -40,7 +38,7 @@ class Login extends Component<Props, {}> {
 
   validateItem = (config: any = {}, component = <div />) => {
     const { getFieldDecorator } = this.props.form
-    const { name, options } = config
+    const { name, options }: {name: never, options: any} = config
     return getFieldDecorator(name, options)(component)
   }
 
@@ -111,4 +109,4 @@ class Login extends Component<Props, {}> {
   }
 }
 
-export default Form.create()(Login as any)
+export default Form.create<Props & FormComponentProps>()(Login as any)

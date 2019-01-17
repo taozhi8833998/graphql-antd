@@ -5,7 +5,7 @@ import App from './App'
 import store from './store'
 import * as serviceWorker from './serviceWorker'
 
-console.log(`process.env: `, process.env);
+console.log(`process.env: `, process.env)
 if (process.env.REACT_APP_MODE == 'electron') {
   console.log(`Running in Electron: Filesystem access is enabled.`)
 }

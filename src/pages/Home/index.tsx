@@ -7,8 +7,7 @@ import { StoreConsumer, ContextStore } from '../../store'
 import { USRINFO } from '../../queries'
 import './index.css'
 
-interface Props extends RouteComponentProps<any> {
-}
+interface Props extends RouteComponentProps<any> {}
 
 @(withRouter as any)
 class Home extends PureComponent<Props, {}> {
