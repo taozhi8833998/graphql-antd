@@ -37,6 +37,7 @@
     "build:web": "craco build --config craco.config.web.js",
     "build:electron": "env-cmd .env.electron craco build --config craco.config.electron.js",
     "watch:electron": "npm-watch",
+    "watch": " yarn start:web && yarn watch:electron",
     "test": "craco test",
     "eject": "react-scripts eject",
     "pack": "electron-builder --dir",

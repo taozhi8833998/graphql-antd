@@ -54,14 +54,8 @@ function createWindow() {
     });
 
     // and load the index.html of the app.
-    // mainWindow.loadURL('http://localhost:3000');
-    mainWindow.loadFile(path.join(__dirname, "./build/index.html"));
-
-    // mainWindow.loadURL(url.format({
-    //     pathname: 'localhost:3000',
-    //     protocol: 'http:',
-    //     slashes: true
-    // }));
+    mainWindow.loadURL('http://localhost:3000');
+    // mainWindow.loadFile(path.join(__dirname, "./build/index.html"));
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools();

@@ -12,7 +12,7 @@ yarn start:web
 #### electron
 To build for the electron, launch an electron window and reload electron automatically while developing...
 ```
-yarn watch:electron
+yarn watch
 ```
 and in another console tab...
 ```

@@ -23,7 +23,7 @@ class Home extends PureComponent<Props, {}> {
                 if (loading) return com
                 if (error) return <div>{ error.message }</div>
                 const name = context.store.commonManager.getValueByKeys(['userInfo', 'name'], data, 'unknow')
-                return <div>{name} </div>
+                return <div>{name}</div>
               }
             }
           </Query>
