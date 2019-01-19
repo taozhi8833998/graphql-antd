@@ -1,3 +1,4 @@
+// read more examples https://github.com/apollographql/react-apollo/blob/master/test/typescript-usage.tsx
 import * as React from 'react'
 import { graphql } from 'react-apollo'
 import { USRINFO } from '../../queries'
