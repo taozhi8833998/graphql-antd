@@ -4,6 +4,8 @@ const fs = require('fs');
 const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
+// http protocol
+const protocol = electron.protocol;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -55,6 +57,12 @@ function createWindow() {
     // mainWindow.loadURL('http://localhost:3000');
     mainWindow.loadFile(path.join(__dirname, "./build/index.html"));
 
+    // mainWindow.loadURL(url.format({
+    //     pathname: 'localhost:3000',
+    //     protocol: 'http:',
+    //     slashes: true
+    // }));
+
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
 
@@ -71,6 +79,13 @@ function createWindow() {
         mainWindow.destroy();
         createWindow();
     });
+
+    // protocol.registerHttpProtocol('http', (request, callback) => {
+    //     const url = request.url.substr(7)
+    //     callback({ path: path.normalize(`${__dirname}/${url}`) })
+    // }, (error) => {
+    //     if (error) console.error('Failed to register protocol')
+    // })
 }
 
 // This method will be called when Electron has finished

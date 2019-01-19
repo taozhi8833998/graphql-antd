@@ -45,6 +45,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "watch": {
+    "build:electron": "src/**/*.*"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",

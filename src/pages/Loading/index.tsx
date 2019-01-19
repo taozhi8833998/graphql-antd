@@ -6,9 +6,9 @@ import { Query } from 'react-apollo'
 import { StoreConsumer, ContextStore } from '../../store'
 import { USRINFO } from '../../queries'
 import './index.css'
+import Basic from '../../components/Sfc'
 
-interface Props extends RouteComponentProps<any> {
-}
+interface Props extends RouteComponentProps<any> {}
 
 @(withRouter as any)
 class Loading extends PureComponent<Props, {}> {
