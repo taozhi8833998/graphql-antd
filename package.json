@@ -41,13 +41,40 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win --x64",
+    "dist:linux": "electron-builder --linux",
+    "dist:mac": "electron-builder --mac"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "watch": {
     "build:electron": "src/**/*.*"
+  },
+  "build": {
+    "appId": "com.example.graphql-antd",
+    "mac": {
+      "icon": "public/icns/app.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "public/icns/app.ico",
+      "target": [
+        "zip",
+        "nsis"
+      ]
+    },
+    "linux": {
+      "icon": "public/icns/app.png",
+      "target": [
+        "snap",
+        "rpm"
+      ]
+    }
   },
   "browserslist": [
     ">0.2%",

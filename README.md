@@ -24,7 +24,10 @@ yarn start:electron-dev
 To build a native application (i.e. for MacOS)...
 ```
 yarn build:electron
-yarn dist
+yarn dist // default using current system
+yarn dist:mac // for macos
+yarn dist:win // for windows
+yarn dist:linux // for linux
 ```
 
 Then launch the dmg found in the `dist` folder or open the app in `dist/mac`
